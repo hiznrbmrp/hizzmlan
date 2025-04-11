@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProjectF</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+      body {
+        background: #f7f9fc;
+        color: #111;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 5%;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      nav a {
+        margin: 0 1rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+      nav a:hover {
+        color: #0070f3;
+      }
+      .buttons a {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-left: 1rem;
+        font-weight: 600;
+      }
+      .login {
+        color: #333;
+      }
+      .signup {
+        background: #0070f3;
+        color: #fff;
+      }
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem 5%;
+      }
+      .hero-text {
+        max-width: 500px;
+      }
+      .hero-text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .hero-text p {
+        color: #666;
+        margin-bottom: 2rem;
+      }
+      .hero-text .cta-buttons a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        font-weight: 600;
+        text-decoration: none;
+        margin-right: 1rem;
+      }
+
+      .hero-img {
+        margin-right: 120px;
+      }
+
+      .btn-blue {
+        background: #0070f3;
+        color: white;
+      }
+
+      .hero-img {
+        max-width: 500px;
+      }
+
+      /* section 2 */
+
+      .section-2 {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 3rem 5%;
+        gap: 1rem;
+      }
+      .section-2 .text-block {
+        flex: 1;
+        min-width: 300px;
+        background: #fff;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+      .section-2 .text-block h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .section-2 .text-block p {
+        color: #444;
+      }
+      .section-2 .image-block {
+        flex: 1;
+        min-width: 300px;
+      }
+      .section-2 .image-block img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      .section-2 .half-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+      .section-2 .half-box {
+        flex: 1;
+        min-width: 300px;
+        padding: 2rem;
+        color: white;
+      }
+      .half-box.blue {
+        background: #001f3f;
+      }
+      .half-box.red {
+        background: #e50914;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Section 3 */
+
+      .section-3 {
+        background-color: #1e3c64;
+        color: #fff;
+        padding: 60px 20px;
+      }
+
+      .container-about {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 1000px;
+        margin: auto;
+        gap: 40px;
+        justify-content: center;
+      }
+
+      .profile-img img {
+        border-radius: 50%;
+        border: 6px solid #c4a484;
+      }
+
+      .profile-text {
+        max-width: 500px;
+      }
+
+      .profile-text h2 {
+        color: #c4a484;
+        font-size: 32px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #c4a484;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      .profile-text p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+      }
+
+      /* Section 4 */
+
+      .contact-section {
+        background: #b2d8f7;
+        padding: 60px 20px;
+      }
+
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1000px;
+        margin: auto;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .contact-info {
+        background: #113f67;
+        color: #fff;
+        padding: 40px;
+        flex: 1;
+        min-width: 280px;
+      }
+
+      .contact-info h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .contact-info p {
+        margin: 10px 0;
+        font-size: 14px;
+      }
+
+      .social-icons {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      .contact-form {
+        flex: 2;
+        padding: 40px;
+        min-width: 300px;
+      }
+
+      .contact-form h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #113f67;
+      }
+
+      .contact-form p {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        resize: none;
+      }
+
+      .contact-form button {
+        padding: 12px 30px;
+        background: #59bfff;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+      }
+
+      .contact-form button:hover {
+        background: #3aa7eb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><strong>MELLAN</strong></div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about-me">About me</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="buttons">
+        <a href="signin.html" class="signup">Sign up</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <p>- Hey Apakah kamu sehat?</p>
+        <h1>The best way to showcase your project.</h1>
+        <p>Here you can put a short description about your project.</p>
+        <div class="cta-buttons">
+          <a
+            href="https://www.domainesia.com/berita/belajar-coding-untuk-pemula/"
+            class="btn-blue"
+            >Belajar Coding</a
+          >
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="ladii.png" alt="Showcase image" width="140%" />
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+
+    <section class="section-2" id="home">
+      <div class="text-block">
+        <h2>First</h2>
+        <p>
+          Halo Sobat! Sebelumnya, terimakasih telah mengunjungi website ini.
+          Saya masih belajar dalam membuat dan mendesign suatu web. Saya buat
+          website ini untuk diri pribadi serta koleksi. Ada beberapa website
+          yang saya buat, seperti tentang pernikahan, bisnis, dan portofolio.
+          Namun saya tidak menyimpan linknya. Jadi hilang entah kemana. Saya cek
+          di github, perlu login. Malas!
+        </p>
+      </div>
+      <div class="image-block">
+        <img
+          src="scen.jfif"
+          alt="Image Placeholder"
+          width="100%"
+          height="300"
+        />
+      </div>
+      <div class="half-boxes">
+        <div class="half-box blue">
+          <p>
+            Baiklah, sebenarnya apasih itu website? Website adalah kumpulan
+            halaman web atau lokasi di internet tempat Anda menyimpan informasi
+            dan menyajikannya agar bisa diakses oleh siapa pun secara online.
+            Informasi ini bisa tentang diri Anda, bisnis, atau bahkan topik yang
+            Anda minati. Lalu untuk membuat website seperti ini, pentingnya kita
+            belajar bahasa pemrograman. Ada beberapa bahasa pemrograman yang
+            sering digunakan seperti, Python, C#, C++, JavaScript, PHP, Swift,
+            Java, Go, SQL, Ruby. Bahasa pemrograman memungkinkan penggunaan
+            logika seperti “if-else” atau “switch-case” untuk mengambil
+            keputusan berdasarkan kondisi tertentu. Tapi untuk membuat website,
+            Anda harus pelajari HTML dan CSS dahulu.
+          </p>
+        </div>
+        <div class="half-box red">
+          <p>
+            Kamu bisa membuat website dengan imajinasi mu sendiri. Jika kamu
+            paham bahasa pemrograman, kamu bisa saja membuat website dengan
+            imajinasi mu lalu tuangkan dalam bentuk kode. Tapi bisa aja nih kamu
+            buat website pakai chat gpt atau AI lainnya. Kamu hanya deskripsikan
+            bagaimana website mu. Kalau susah, bisa kamu ambil contoh gambar
+            halaman website lalu berikan kepada chat gpt dan minta agar buatkan
+            website seperti itu. Walau kamu pakai chat gpt, kamu perlu juga
+            belajar. Karena jika kamu tidak mengerti apa fungsi dari kode kode
+            yang diberikan chat gpt, bisa saja website mu jadi jelek.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-3" id="about-me">
+      <div class="container-about">
+        <div class="profile-img">
+          <img
+            src="WhatsApp Image 2025-04-11 at 18.50.44.jpeg"
+            alt="Foto Profil"
+            width="200px"
+            height="200px"
+          />
+        </div>
+        <div class="profile-text">
+          <h2>About Me</h2>
+          <p>
+            Sekarang aku masih SMP. Aku bersekolah di Smp Santo Thomas 1 Medan.
+            Aku sekarang masih kelas 2 SMP, semester 2. Terakhir aku mendapatkan
+            ranking 7.
+          </p>
+          <p>
+            Nama ku Hizkia. Aku suka mata pelajaran Matematika dan Informatika.
+            Impian ku aku ingin menjadi software engineering. Lalu aku ingin SMA
+            di Del. Dan aku pengen masuk Universitas bagus, seperti UI, UGM,
+            atau mungkin UNHAN.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Contact Us</h2>
+          <p>📍 Deli Serdang, Komplek Poni Garden<br />Blok i NO.6</p>
+          <p>✉️ hizz@gmail.com</p>
+          <p>🔗 hizkia.marpaung</p>
+          <p>📞 +6281370267693</p>
+          <div class="social-icons">
+            <span>🌐</span>
+            <span>🐦</span>
+            <span>💼</span>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h2>Get in Touch</h2>
+          <p>Feel free to drop us a line below!</p>
+          <form action="//formspree.io/f/xzzeyjyn" method="POST">
+            <input type="text" placeholder="Your name" required />
+            <input
+              type="email"
+              name="_replyto"
+              placeholder="Your email"
+              required
+            />
+            <textarea
+              placeholder="Type your message here..."
+              required
+            ></textarea>
+            <button type="submit">SEND</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

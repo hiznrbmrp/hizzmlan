@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f2f2f2;
+      }
+
+      .container {
+        background-color: #ffffff;
+        width: 400px;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .social-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .social-container a {
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        padding: 10px;
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .sign-in-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #00c9a7;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .sign-in-btn:hover {
+        background-color: #00b397;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sign in</h2>
+      <div class="social-container">
+        <a href="#">f</a>
+        <a href="#">G+</a>
+        <a href="#">in</a>
+      </div>
+      <p style="text-align: center; font-size: 14px">atau gunakan akun anda</p>
+      <form action="https://your-redirect-url.com" method="get">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          class="form-input"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          class="form-input"
+          required
+        />
+        <button type="submit" class="sign-in-btn">SIGN IN</button>
+      </form>
+    </div>
+  </body>
+</html>
